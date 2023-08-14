@@ -6,7 +6,7 @@ import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 import { createContext, useState } from "react";
 
 const client = new ApolloClient({
-  uri: "https://thingproxy.freeboard.io/fetch/https://song-tc.pixelotech.com/graphql",
+  uri: "https://song-tc.pixelotech.com/graphql",
   cache: new InMemoryCache(),
 });
 export const songContext = createContext();
