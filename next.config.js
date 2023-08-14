@@ -1,4 +1,16 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   reactStrictMode: true,
+// }
 
-module.exports = nextConfig
+
+module.exports = {
+  images: {
+    domains: ['song-tc.pixelotech.com'],
+  },
+  plugins: [
+    // ...
+    require('tailwind-scrollbar'),
+]
+
+};

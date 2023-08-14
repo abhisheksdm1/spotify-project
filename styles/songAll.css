@@ -1,0 +1,10 @@
+.song-container img {
+    border-radius: 50%;
+     /* This ensures the image itself is also rounded */
+}
+.song-container{
+    border: none;
+    background-color: #4b5563;
+    border-radius: 10px;
+   
+}
