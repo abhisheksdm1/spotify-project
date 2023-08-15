@@ -14,7 +14,7 @@ import {
 } from "react-icons/bs";
 import AudioPlayer from "../components/AudioPlayer";
 import { songContext } from "../pages/_app";
-import {getSong} from "../getSong"
+
 const SONGS_QUERY = gql`
   query {
     getSongs {
@@ -59,7 +59,7 @@ const Admin = () => {
           <h1>
             <br />
           </h1>
-          {getSong
+          {getSongs
             .filter((song) => search === "" || song.artist === search)
             .map((item, index) => {
               return (
@@ -108,7 +108,7 @@ const Admin = () => {
           <p className="text-xs sm:text-text-xs md:text-sm lg:text-base text-gray-400 font-light">
             The Script
           </p>
-          <AudioPlayer getSong={getSong} id={id} toggle={toggle} />
+          <AudioPlayer getSongs={getSongs} id={id} toggle={toggle} />
 
           {/* <div className="flex justify-between" style={{width:'400px',background:'green'}}>
           

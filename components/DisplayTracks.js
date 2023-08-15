@@ -4,7 +4,7 @@ export default function DisplayTracks({
   audioRef,
   setDuration,
   progressBarRef,
-  getSong,
+  getSongs,
   id,
 }) {
   const onLoadedMetadata = () => {
@@ -16,7 +16,7 @@ export default function DisplayTracks({
   return (
     <div>
       {id ? (
-        getSong
+        getSongs
           .filter((item, index) => index + 1 == id)
           .map((item, index) => (
             <div key={index}>

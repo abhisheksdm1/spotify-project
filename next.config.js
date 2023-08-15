@@ -7,10 +7,5 @@
 module.exports = {
   images: {
     domains: ['song-tc.pixelotech.com'],
-  },
-  plugins: [
-    // ...
-    require('tailwind-scrollbar'),
-]
-
+  }
 };

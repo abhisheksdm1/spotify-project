@@ -3,7 +3,7 @@ import DisplayTrack from "./DisplayTracks";
 import Controls from "./Controls";
 import ProgressBar from "./ProgressBar";
 import Image from "next/image";
-function AudioPlayer({ getSong, id, toggle }) {
+function AudioPlayer({ getSongs, id, toggle }) {
   const [timeProgress, setTimeProgress] = useState(0);
   const [duration, setDuration] = useState(0);
   const audioRef = useRef();
@@ -13,7 +13,7 @@ function AudioPlayer({ getSong, id, toggle }) {
       <div>
         <br />
         {id ? (
-          getSong
+          getSongs
             .filter((item, index) => index + 1 == id)
             .map(
               (item, index) => (
@@ -49,7 +49,7 @@ function AudioPlayer({ getSong, id, toggle }) {
       </div>
       <div>
         <DisplayTrack
-          {...{ audioRef, setDuration, progressBarRef, getSong, id }}
+          {...{ audioRef, setDuration, progressBarRef, getSongs, id }}
         />
       </div>
       <div className="w-full m-0">
